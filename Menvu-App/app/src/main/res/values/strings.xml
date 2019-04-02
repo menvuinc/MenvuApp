@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Test2</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="logo">Logo</string>
+    <string name="restaurantCardName">TBD</string>
+</resources>
