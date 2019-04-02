@@ -5,61 +5,28 @@
     build-mode="COLD"
     density="xxhdpi"
     format="10"
-    ir-eligibility="CLASS_ADDED"
+    ir-eligibility="COMPATIBLE"
     plugin-version="3.3.2"
-    timestamp="1554187787834"
+    timestamp="1554189358223"
     token="-9157470328978964975"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="512" />
+        duration="535" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="84" />
+        duration="51" />
     <task
         name="verifier"
-        duration="16" />
+        duration="6" />
 
-    <artifact
-        location="D:\Menvu\MenvuApp\Menvu-App\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\Menvu\MenvuApp\Menvu-App\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\Menvu\MenvuApp\Menvu-App\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\Menvu\MenvuApp\Menvu-App\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\Menvu\MenvuApp\Menvu-App\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
-        type="SPLIT" />
     <artifact
         location="D:\Menvu\MenvuApp\Menvu-App\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
         type="SPLIT" />
-    <artifact
-        location="D:\Menvu\MenvuApp\Menvu-App\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\Menvu\MenvuApp\Menvu-App\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\Menvu\MenvuApp\Menvu-App\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\Menvu\MenvuApp\Menvu-App\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\Menvu\MenvuApp\Menvu-App\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
-        type="SPLIT" />
-    <artifact
-        location="D:\Menvu\MenvuApp\Menvu-App\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
-        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
@@ -107,23 +74,32 @@
     </build>
     <build
         build-mode="COLD"
+        ir-eligibility="CLASS_ADDED"
+        timestamp="1554187787834"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="D:\Menvu\MenvuApp\Menvu-App\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+            type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="COLD"
         ir-eligibility="R_CLASS_CHANGE"
-        timestamp="1554185780507"
+        timestamp="1554188521381"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="D:\Menvu\MenvuApp\Menvu-App\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
             type="SPLIT" />
-    </build>
-    <build
-        build-mode="COLD"
-        ir-eligibility="CLASS_ADDED"
-        timestamp="1554187787834"
-        verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="D:\Menvu\MenvuApp\Menvu-App\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
             type="SPLIT" />
         <artifact
             location="D:\Menvu\MenvuApp\Menvu-App\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\Menvu\MenvuApp\Menvu-App\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\Menvu\MenvuApp\Menvu-App\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
         <artifact
             location="D:\Menvu\MenvuApp\Menvu-App\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
@@ -135,26 +111,23 @@
             location="D:\Menvu\MenvuApp\Menvu-App\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
             type="SPLIT" />
         <artifact
-            location="D:\Menvu\MenvuApp\Menvu-App\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
-            type="SPLIT" />
-        <artifact
-            location="D:\Menvu\MenvuApp\Menvu-App\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
-            type="SPLIT" />
-        <artifact
-            location="D:\Menvu\MenvuApp\Menvu-App\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            location="D:\Menvu\MenvuApp\Menvu-App\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
             type="SPLIT" />
         <artifact
             location="D:\Menvu\MenvuApp\Menvu-App\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
             type="SPLIT" />
         <artifact
-            location="D:\Menvu\MenvuApp\Menvu-App\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
-            type="SPLIT" />
-        <artifact
             location="D:\Menvu\MenvuApp\Menvu-App\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        ir-eligibility="COMPATIBLE"
+        timestamp="1554189358223"
+        verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="D:\Menvu\MenvuApp\Menvu-App\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
-            type="SPLIT_MAIN" />
+            location="D:\Menvu\MenvuApp\Menvu-App\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+            type="SPLIT" />
     </build>
 
 </instant-run>

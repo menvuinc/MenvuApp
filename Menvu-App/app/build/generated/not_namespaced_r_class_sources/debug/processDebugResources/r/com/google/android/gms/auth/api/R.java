@@ -62,9 +62,9 @@ public final class R {
     public static final class id {
         private id() {}
 
-        public static final int adjust_height = 0x7f080026;
-        public static final int adjust_width = 0x7f080027;
-        public static final int auto = 0x7f08002c;
+        public static final int adjust_height = 0x7f080027;
+        public static final int adjust_width = 0x7f080028;
+        public static final int auto = 0x7f08002d;
         public static final int dark = 0x7f080045;
         public static final int icon_only = 0x7f080067;
         public static final int light = 0x7f080071;

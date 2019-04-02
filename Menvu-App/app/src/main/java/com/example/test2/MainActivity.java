@@ -18,6 +18,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.gson.Gson;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -104,6 +105,8 @@ public class MainActivity extends AppCompatActivity implements RestaurantAdapter
     @Override
     public void onRestaurantClick(int position) {
     Intent intent = new Intent(this, RestaurantInfoActivity.class);
+    String clickedRestaurant = new Gson().toJson(restaurantList.get(position));
+    intent.putExtra("ClickedRestaurant", clickedRestaurant);
     startActivity(intent);
     }
 }
