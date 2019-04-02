@@ -1,18 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-        <item
-            android:id="@+id/MNUAct"
-            android:icon="@drawable/menvusquarelogo"
-            android:title="Account" />
+    <item
+        android:id="@+id/MNUAct"
+        android:checkable="false"
+        android:enabled="true"
+        android:icon="@drawable/menvusquarelogo"
+        android:title="Account"
+        android:visible="true" />
 
-        <item
-            android:id="@+id/MNURestaurants"
-            android:icon="@drawable/menvusquarelogo"
-            android:title="Restaurants" />
+    <item
+        android:id="@+id/MNURestaurants"
+        android:checkable="false"
+        android:enabled="true"
+        android:icon="@drawable/menvusquarelogo"
+        android:title="Restaurants"
+        android:visible="true" />
 
-        <item
-            android:id="@+id/MNUCheckout"
-            android:icon="@drawable/menvusquarelogo"
-            android:title="Checkout" />
+    <item
+        android:id="@+id/MNUCheckout"
+        android:checkable="false"
+        android:enabled="true"
+        android:icon="@drawable/menvusquarelogo"
+        android:title="Checkout"
+        android:visible="true" />
 </menu>

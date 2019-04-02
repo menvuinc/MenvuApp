@@ -1,11 +1,13 @@
 package com.example.test2;
 
+import android.content.Intent;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.SearchView;
@@ -24,7 +26,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements RestaurantAdapter.OnRestaurantListener {
 
     private static final  String RESTAURANT_URL = "http://menvu.menu/php/api.php";
     
@@ -56,10 +58,12 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+
+
         loadRestaurants();
 
-    }
 
+    }
     private void loadRestaurants(){
         final Menu m = new Menu();
         StringRequest stringRequest = new StringRequest(Request.Method.GET, RESTAURANT_URL,
@@ -81,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
                                 Restaurant restaurant = new Restaurant(id, name, phone, address, imageurl, m);
                                 restaurantList.add(restaurant);
                             }
-                            adapter = new RestaurantAdapter(MainActivity.this, restaurantList);
+                            adapter = new RestaurantAdapter(MainActivity.this, restaurantList, MainActivity.this);
                             recyclerView.setAdapter(adapter);
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -97,4 +101,9 @@ public class MainActivity extends AppCompatActivity {
         Volley.newRequestQueue(MainActivity.this).add(stringRequest);
     }
 
+    @Override
+    public void onRestaurantClick(int position) {
+    Intent intent = new Intent(this, RestaurantInfoActivity.class);
+    startActivity(intent);
+    }
 }
