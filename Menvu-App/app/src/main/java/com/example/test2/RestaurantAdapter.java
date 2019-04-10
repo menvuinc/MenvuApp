@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.List;
 
 public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.RestaurantViewHolder>{
@@ -40,7 +42,7 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.Re
         holder.TXTAddress.setText(restaurant.getAddress());
         holder.TXTPhone.setText(restaurant.getPhoneNumber());
 
-        holder.imageView.setImageDrawable(mCtx.getResources().getDrawable(R.drawable.menvusquarelogo));
+        Glide.with(mCtx).load(restaurant.getImage()).into(holder.imageView);
     }
 
     @Override

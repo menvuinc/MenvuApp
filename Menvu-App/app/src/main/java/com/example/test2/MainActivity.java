@@ -104,9 +104,9 @@ public class MainActivity extends AppCompatActivity implements RestaurantAdapter
 
     @Override
     public void onRestaurantClick(int position) {
-    Intent intent = new Intent(this, RestaurantInfoActivity.class);
-    String clickedRestaurant = new Gson().toJson(restaurantList.get(position));
-    intent.putExtra("ClickedRestaurant", clickedRestaurant);
-    startActivity(intent);
+        Intent intent = new Intent(this, RestaurantInfoActivity.class);
+        String clickedRestaurant = new Gson().toJson(restaurantList.get(position));
+        intent.putExtra("ClickedRestaurant", clickedRestaurant);
+        startActivity(intent);
     }
 }
