@@ -32,13 +32,25 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/password"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TXTuserName"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/TXTuserName" />
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="142dp"
+        android:layout_marginLeft="142dp"
+        android:layout_marginTop="458dp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <Button
         android:id="@+id/BTNLogin"
@@ -66,10 +78,11 @@
         android:background="@color/cardview_dark_background"
         android:contentDescription="@string/logo"
         android:scaleType="centerInside"
-        android:src="@drawable/menvu"
+        android:src="@mipmap/menvu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/menvu" />
+        tools:srcCompat="@mipmap/menvu" />
+
 
 </android.support.constraint.ConstraintLayout>

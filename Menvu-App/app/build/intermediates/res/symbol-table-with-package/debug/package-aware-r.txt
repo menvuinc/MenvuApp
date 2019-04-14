@@ -1048,8 +1048,6 @@ drawable ic_launcher_foreground
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
-drawable menvu
-drawable menvusquarelogo
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
 drawable navigation_empty_icon
@@ -1240,6 +1238,7 @@ id shortcut
 id showCustom
 id showHome
 id showTitle
+id sign_in_button
 id smallLabel
 id snackbar_action
 id snackbar_text
@@ -1383,6 +1382,8 @@ layout support_simple_spinner_dropdown_item
 menu bottom_nav_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
+mipmap menvu
+mipmap menvusquarelogo
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description

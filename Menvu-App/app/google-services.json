@@ -1,0 +1,44 @@
+{
+  "project_info": {
+    "project_number": "980361820400",
+    "firebase_url": "https://menvu-app.firebaseio.com",
+    "project_id": "menvu-app",
+    "storage_bucket": "menvu-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:980361820400:android:3f428a0fce98a4be",
+        "android_client_info": {
+          "package_name": "com.example.test2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "980361820400-883ltgb6folssct4tlfuobafmuqf5vcf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.test2",
+            "certificate_hash": "ae2aa2fd82fb114f1801b72f53d0d00ac9b4b805"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIjJBKX-l1smjThXNgY9N5rUiUBixBr5M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "980361820400-6f3p8s6sv3m3lev45stusl03apkkaqgb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
+//USe to dynamically adapt restaurant cards
 public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.RestaurantViewHolder>{
 
     private Context mCtx;
@@ -40,7 +41,7 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.Re
         holder.TXTAddress.setText(restaurant.getAddress());
         holder.TXTPhone.setText(restaurant.getPhoneNumber());
 
-        holder.imageView.setImageDrawable(mCtx.getResources().getDrawable(R.drawable.menvusquarelogo));
+       holder.imageView.setImageDrawable(mCtx.getResources().getDrawable(R.mipmap.menvusquarelogo));
     }
 
     @Override

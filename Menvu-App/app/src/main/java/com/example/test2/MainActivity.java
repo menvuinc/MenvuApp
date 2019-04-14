@@ -18,6 +18,17 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.android.gms.auth.api.Auth;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.auth.api.signin.GoogleSignInResult;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.SignInButton;
+import com.google.android.gms.common.api.ApiException;
+import com.google.android.gms.tasks.Task;
 import com.google.gson.Gson;
 
 import org.json.JSONArray;
@@ -33,6 +44,8 @@ public class MainActivity extends AppCompatActivity implements RestaurantAdapter
     
     RecyclerView recyclerView;
     RestaurantAdapter adapter;
+    GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).build();
+    GoogleSignInClient mGoogleSignInClient;
 
     List<Restaurant> restaurantList;
 
@@ -40,7 +53,29 @@ public class MainActivity extends AppCompatActivity implements RestaurantAdapter
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
+        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
         Button BTNLogin = findViewById(R.id.BTNLogin);
+
+        SignInButton signInButton = findViewById(R.id.sign_in_button);
+        findViewById(R.id.sign_in_button);
+        signInButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                switch (v.getId()) {
+                    case R.id.sign_in_button:
+                        signIn();
+                        break;
+                    // ...
+                }
+                BottomNavigationView BottomNavigationView = findViewById(R.id.bottomNavigation);
+                setContentView(R.layout.menu_directory);
+                searchForRestaurants();
+            }
+        });;
+
         BTNLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,6 +86,26 @@ public class MainActivity extends AppCompatActivity implements RestaurantAdapter
         });
     }
 
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.sign_in_button:
+                signIn();
+                break;
+            // ...
+        }
+    }
+
+    //Loads directly after onCreate, used to see if a google sign in has already occured, might be useful later was well.
+    @Override
+    protected void onStart()
+    {
+        super.onStart();
+          GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
+        //UpdateUi(account); //Waiting for firebase implementation
+
+    }
+
+
     void searchForRestaurants(){
 
         restaurantList = new ArrayList<>();
@@ -59,11 +114,7 @@ public class MainActivity extends AppCompatActivity implements RestaurantAdapter
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-
-
         loadRestaurants();
-
-
     }
     private void loadRestaurants(){
         final Menu m = new Menu();
@@ -109,4 +160,40 @@ public class MainActivity extends AppCompatActivity implements RestaurantAdapter
     intent.putExtra("ClickedRestaurant", clickedRestaurant);
     startActivity(intent);
     }
+
+
+
+
+    private void signIn() {
+        int RC_SIGN_IN = 0;
+       Intent signInIntent = mGoogleSignInClient.getSignInIntent();
+       startActivityForResult(signInIntent, RC_SIGN_IN);
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        int RC_SIGN_IN = resultCode;
+        // Result returned from launching the Intent from GoogleSignInClient.getSignInIntent(...);
+        if (requestCode == RC_SIGN_IN) {
+            // The Task returned from this call is always completed, no need to attach
+            // a listener.
+            Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
+            handleSignInResult(task);
+        }
+    }
+
+    private void handleSignInResult(Task<GoogleSignInAccount> completedTask){
+         try{
+             GoogleSignInAccount account = completedTask.getResult(ApiException.class);
+         } catch  (ApiException e){
+             System.out.println("Broke :(");
+         }
+
+    }
+
+
+
+
+
 }

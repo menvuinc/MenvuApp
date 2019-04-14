@@ -6,7 +6,7 @@
         android:id="@+id/MNUAct"
         android:checkable="false"
         android:enabled="true"
-        android:icon="@drawable/menvusquarelogo"
+        android:icon="@mipmap/menvusquarelogo"
         android:title="Account"
         android:visible="true" />
 
@@ -14,7 +14,7 @@
         android:id="@+id/MNURestaurants"
         android:checkable="false"
         android:enabled="true"
-        android:icon="@drawable/menvusquarelogo"
+        android:icon="@mipmap/menvusquarelogo"
         android:title="Restaurants"
         android:visible="true" />
 
@@ -22,7 +22,7 @@
         android:id="@+id/MNUCheckout"
         android:checkable="false"
         android:enabled="true"
-        android:icon="@drawable/menvusquarelogo"
+        android:icon="@mipmap/menvusquarelogo"
         android:title="Checkout"
         android:visible="true" />
 </menu>
